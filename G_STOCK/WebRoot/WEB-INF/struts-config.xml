@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN" "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="inventaireForm" type="com.yourcompany.struts.form.InventaireForm" />
+    <form-bean name="invForm" type="com.yourcompany.struts.form.InvForm" />
+    <form-bean name="newInventaireForm" type="com.yourcompany.struts.form.NewInventaireForm" />
+    <form-bean name="modifierInvForm" type="com.yourcompany.struts.form.ModifierInvForm" />
+    <form-bean name="supprimerInvForm" type="com.yourcompany.struts.form.SupprimerInvForm" />
+    <form-bean name="invHistoriqueForm" type="com.yourcompany.struts.form.InvHistoriqueForm" />
+    <form-bean name="ajouterAchatForm" type="com.yourcompany.struts.form.AjouterAchatForm" />
+    <form-bean name="modifierAchatForm" type="com.yourcompany.struts.form.ModifierAchatForm" />
+    <form-bean name="supprimerAchatForm" type="com.yourcompany.struts.form.SupprimerAchatForm" />
+    <form-bean name="statistiquesForm" type="com.yourcompany.struts.form.StatistiquesForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    
+    
+    
+    <action
+      attribute="modifierInvForm"
+      name="modifierInvForm"
+      path="/modifierInv"
+      scope="request"
+      type="com.yourcompany.struts.action.ModifierInvAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/Inventaire.jsp" />
+    </action>
+    <action
+      attribute="newInventaireForm"
+      name="newInventaireForm"
+      path="/newInventaire"
+      scope="request"
+      type="com.yourcompany.struts.action.NewInventaireAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/Inventaire.jsp" />
+    </action>
+    <action
+      attribute="supprimerInvForm"
+      name="supprimerInvForm"
+      path="/supprimerInv"
+      scope="request"
+      type="com.yourcompany.struts.action.SupprimerInvAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/Inventaire.jsp" />
+    </action>
+    <action
+      attribute="invHistoriqueForm"
+      input="/invHistorique.jsp"
+      name="invHistoriqueForm"
+      path="/invHistorique"
+      scope="request"
+      type="com.yourcompany.struts.action.InvHistoriqueAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/invHistorique.jsp" />
+    </action>
+    <action
+      attribute="ajouterAchatForm"
+      name="ajouterAchatForm"
+      path="/ajouterAchat"
+      scope="request"
+      type="com.yourcompany.struts.action.AjouterAchatAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/Achat.jsp" />
+      
+    </action>
+    <action
+      attribute="modifierAchatForm"
+      name="modifierAchatForm"
+      path="/modifierAchat"
+      scope="request"
+      type="com.yourcompany.struts.action.ModifierAchatAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/Achat.jsp" />
+    </action>
+    <action
+      attribute="supprimerAchatForm"
+      name="supprimerAchatForm"
+      path="/supprimerAchat"
+      scope="request"
+      type="com.yourcompany.struts.action.SupprimerAchatAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/Achat.jsp" />
+    </action>
+    <action
+      attribute="statistiquesForm"
+      name="statistiquesForm"
+      path="/statistiques"
+      scope="request"
+      type="com.yourcompany.struts.action.StatistiquesAction">
+      <set-property property="cancellable" value="false" />
+      <forward name="success" path="/Statistiques.jsp" />
+    </action>
+    <action path="/disconnect" type="com.yourcompany.struts.action.DisconnectAction">
+      <set-property property="cancellable" value="true" />
+    </action>
+
+  </action-mappings>
+
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+

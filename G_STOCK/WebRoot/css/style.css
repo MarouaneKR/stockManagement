@@ -1,0 +1,19 @@
+@CHARSET "ISO-8859-1";
+
+body {
+		background : url("../images/background.jpg");
+	}
+	
+.container {
+		margin-top : 100px;
+		padding : 20px;
+		padding-top : 50px;
+		padding-bottom : 50px;
+		border-radius : 10px;
+		background : rgb(240,240,240, 0.8);
+		
+}
+
+.btn {
+		background : rgb(8,0,84);
+	}
