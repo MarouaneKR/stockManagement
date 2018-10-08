@@ -1,6 +1,7 @@
 # stockManagement
 Web application about Stock Management to add new purcheses and to display stock inventory as the inventory history.
 
+VIDEO : https://www.youtube.com/watch?v=s0h6sQEyO44
 
 #Frameworks
 - JEE (Principal)
